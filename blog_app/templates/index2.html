@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="{% static 'details.css' %}">
+    <title>{{ product.name }} details</title>
+</head>
+<body>
+  <div class="image"><img src="{{ product.image }}" alt="{{ product.name }}" /></div>
+    <div class="card">
+        <h2 class="title">{{ product.name }}</h2>
+        <div class="content">
+            <p class="description">{{product.short_description}}</p>
+            <div class="date">
+              {{ product.created_at }}
+            </div>
+        </div>
+        <a href="{% url 'product_list' %}" class="back">Go back</a>
+    </div>
+  </div>
+</body>
+</html>

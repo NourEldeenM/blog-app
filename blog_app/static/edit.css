@@ -1,0 +1,46 @@
+body {
+  font-family: "Cairo", sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background-color: #f0f0f0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form label {
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+form input,
+form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: "Cairo";
+  width: 260px;
+  font-size: 15px;
+}
+
+form button {
+  background-color: #ffc55a;
+  border: none;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 4px;
+}
+
+form button:hover {
+  background-color: #2c4e80;
+}

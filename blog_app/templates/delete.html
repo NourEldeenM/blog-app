@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'delete.css' %}" />
+    <title>Edit Blog</title>
+  </head>
+  <body>
+    <p>Sure you want to delete <span>"{{ product.name }}"</span>?</p>
+    <div class="image">
+      <img src="{{ product.image }}" alt="{{ product.name }}" />
+    </div>
+    <form method="post">
+      {% csrf_token %}
+      <button type="submit" name="Delete">Yes, Delete</button>
+    </form>
+  </body>
+</html>
